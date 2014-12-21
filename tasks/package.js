@@ -2,9 +2,19 @@ var config = {
     options: {
     },
 
-    all: {
-        src: './src/main.js',
-        dest: './server/public/scripts/example.js'
+    solitaire: {
+        src: './src/solitaire.js',
+        dest: './server/public/scripts/solitaire.js'
+    },
+
+    freecell: {
+        src: './src/freecell.js',
+        dest: './server/public/scripts/freecell.js'
+    },
+
+    spider: {
+        src: './src/spider.js',
+        dest: './server/public/scripts/spider.js'
     }
 };
 

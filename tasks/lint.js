@@ -11,7 +11,6 @@ var config = {
             'test/**/*.js',
             'server/*.js',
             'server/routes/*.js',
-
             'gruntfile.js',
             'tasks/*.js'
         ]

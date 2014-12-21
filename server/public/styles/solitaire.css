@@ -1,0 +1,61 @@
+#stock {
+    top: 0px;
+    left: 0px;
+}
+
+#waste {
+    top: 0px;
+    left: 87px;
+}
+
+.foundation {
+    top: 0px;
+}
+
+#f1 {
+    left: 261px;
+}
+
+#f2 {
+    left: 348px;
+}
+
+#f3 {
+    left: 435px;
+}
+
+#f4 {
+    left: 522px;
+}
+
+.tableau {
+    top: 165px;
+}
+
+#t1 {
+    left: 0px;
+}
+
+#t2 {
+    left: 87px;
+}
+
+#t3 {
+    left: 174px;
+}
+
+#t4 {
+    left: 261px;
+}
+
+#t5 {
+    left: 348px;
+}
+
+#t6 {
+    left: 435px;
+}
+
+#t7 {
+    left: 522px;
+}

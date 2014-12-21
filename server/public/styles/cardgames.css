@@ -1,0 +1,181 @@
+
+html {
+    min-height: 100%;
+}
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family:  'Open Sans', "Lucida Grande", "Lucida Sans Unicode", Tahoma, Geneva, Arial, Verdana, sans-serif;
+    color: white;
+    padding: 0px;
+    min-height: 100%;
+}
+
+ol { padding: 10px 40px; }
+
+a: hover {
+    color: orange !important;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    padding-bottom: 19px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+    .container {
+    max-width: 730px;
+    }
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+    padding-right: 0;
+    padding-left: 0;
+    }
+    /* Space out the masthead */
+    .header {
+    margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+    border-bottom: 0;
+    }
+}
+
+.container {
+    max-width: 730px;
+}
+
+#board {
+    position: relative;
+    height: 520px;
+}
+
+#jumbotron {
+    margin: 5px;
+    font-size: 14px;
+}
+
+.cell {
+    width: 70px;
+    height: 98px;
+    position: absolute;
+    border: dashed 2px #345543;
+    border-radius: 8px;
+}
+
+.card {
+    border-radius: 4px;
+    width: 70px;
+    height: 98px;
+    background: url(/images/cards_web.png) no-repeat 0 0;
+    background-size: 980px 392px;
+    box-shadow: 1px 1px 3px #333333;
+    position: absolute;
+    cursor: pointer;
+}
+
+.card.flipped {
+    /* 13 * -70, 1 * -98 */
+    background-position: -910px -98px;
+}
+
+.card.hearts1  { background-position:    0px 0px; }
+.card.hearts2  { background-position:  -70px 0px; }
+.card.hearts3  { background-position: -140px 0px; }
+.card.hearts4  { background-position: -210px 0px; }
+.card.hearts5  { background-position: -280px 0px; }
+.card.hearts6  { background-position: -350px 0px; }
+.card.hearts7  { background-position: -420px 0px; }
+.card.hearts8  { background-position: -490px 0px; }
+.card.hearts9  { background-position: -560px 0px; }
+.card.hearts10 { background-position: -630px 0px; }
+.card.hearts11 { background-position: -700px 0px; }
+.card.hearts12 { background-position: -770px 0px; }
+.card.hearts13 { background-position: -840px 0px; }
+
+.card.diamonds1  { background-position:    0px -98px; }
+.card.diamonds2  { background-position:  -70px -98px; }
+.card.diamonds3  { background-position: -140px -98px; }
+.card.diamonds4  { background-position: -210px -98px; }
+.card.diamonds5  { background-position: -280px -98px; }
+.card.diamonds6  { background-position: -350px -98px; }
+.card.diamonds7  { background-position: -420px -98px; }
+.card.diamonds8  { background-position: -490px -98px; }
+.card.diamonds9  { background-position: -560px -98px; }
+.card.diamonds10 { background-position: -630px -98px; }
+.card.diamonds11 { background-position: -700px -98px; }
+.card.diamonds12 { background-position: -770px -98px; }
+.card.diamonds13 { background-position: -840px -98px; }
+
+.card.clubs1  { background-position:    0px -196px; }
+.card.clubs2  { background-position:  -70px -196px; }
+.card.clubs3  { background-position: -140px -196px; }
+.card.clubs4  { background-position: -210px -196px; }
+.card.clubs5  { background-position: -280px -196px; }
+.card.clubs6  { background-position: -350px -196px; }
+.card.clubs7  { background-position: -420px -196px; }
+.card.clubs8  { background-position: -490px -196px; }
+.card.clubs9  { background-position: -560px -196px; }
+.card.clubs10 { background-position: -630px -196px; }
+.card.clubs11 { background-position: -700px -196px; }
+.card.clubs12 { background-position: -770px -196px; }
+.card.clubs13 { background-position: -840px -196px; }
+
+.card.spades1  { background-position:    0px -294px; }
+.card.spades2  { background-position:  -70px -294px; }
+.card.spades3  { background-position: -140px -294px; }
+.card.spades4  { background-position: -210px -294px; }
+.card.spades5  { background-position: -280px -294px; }
+.card.spades6  { background-position: -350px -294px; }
+.card.spades7  { background-position: -420px -294px; }
+.card.spades8  { background-position: -490px -294px; }
+.card.spades9  { background-position: -560px -294px; }
+.card.spades10 { background-position: -630px -294px; }
+.card.spades11 { background-position: -700px -294px; }
+.card.spades12 { background-position: -770px -294px; }
+.card.spades13 { background-position: -840px -294px; }
+
+

@@ -7,7 +7,10 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.get('/', routes.index);
+app.get('/solitaire', routes.solitaire);
+app.get('/freecell', routes.freecell);
+app.get('/spider', routes.spider);
+app.get('/', routes.solitaire);
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
