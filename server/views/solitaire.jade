@@ -1,0 +1,26 @@
+extends base
+
+block styles
+    link(rel="stylesheet", href="/styles/solitaire.css")
+
+
+block scripts
+    script(type="text/javascript", src="/scripts/solitaire.js")
+
+
+block gameboard
+    #board
+        #stock.cell
+        #waste.cell
+        #f1.foundation.cell
+        #f2.foundation.cell
+        #f3.foundation.cell
+        #f4.foundation.cell
+        #t1.tableau.cell
+        #t2.tableau.cell
+        #t3.tableau.cell
+        #t4.tableau.cell
+        #t5.tableau.cell
+        #t6.tableau.cell
+        #t7.tableau.cell
+        #cards

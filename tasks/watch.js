@@ -7,13 +7,23 @@ var config = {
     },
 
     test: {
-        files: [ '<%= test.all %>', 'src/**/*.js' ],
+        files: [ '<%= test.all %>', '<%= lint.all.src %>' ],
         tasks: [ 'test' ]
     },
 
-    package: {
-        files: [ '<%= package.all.src %>', 'src/**/*.js' ],
-        tasks: [ 'package' ]
+    packageSolitaire: {
+        files: [ '<%= package.solitaire.src %>', 'src/common/*.js', 'src/solitaire/*.js' ],
+        tasks: [ 'package:solitaire' ]
+    },
+
+    packageFreecell: {
+        files: [ '<%= package.freecell.src %>', 'src/common/*.js', 'src/freecell/*.js' ],
+        tasks: [ 'package:freecell' ]
+    },
+
+    packageSpider: {
+        files: [ '<%= package.spider.src %>', 'src/common/*.js', 'src/spider/*.js' ],
+        tasks: [ 'package:spider' ]
     },
 
     serve: {
@@ -23,7 +33,8 @@ var config = {
         ],
         tasks:  [ 'serve:reload' ],
         options: {
-            spawn: false
+            spawn: false,
+            livereload: true
         }
     },
 

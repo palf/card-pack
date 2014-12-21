@@ -8,9 +8,9 @@
     "indent": 4,
     "newcap": true,
     "trailing": true,
-    "maxparams": 3,
+    "maxparams": 4,
     "maxdepth": 2,
-    "maxlen": 80,
+    "maxlen": 120,
 
     "bitwise": true,
     "freeze": true,
@@ -30,6 +30,7 @@
         "describe": false,
         "it": false,
         "beforeEach": false,
-        "afterEach": false
+        "afterEach": false,
+        "_": true
     }
 }
