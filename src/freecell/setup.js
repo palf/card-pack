@@ -31,6 +31,31 @@ module.exports = {
     },
 
     deal: function (cards, piles) {
+        var allPiles = [
+            piles.depots[0],
+            piles.depots[1],
+            piles.depots[2],
+            piles.depots[3],
+            piles.tableaux[0],
+            piles.tableaux[1],
+            piles.tableaux[2],
+            piles.tableaux[3],
+            piles.tableaux[4],
+            piles.tableaux[5],
+            piles.tableaux[6],
+            piles.tableaux[7],
+            piles.foundations[0],
+            piles.foundations[1],
+            piles.foundations[2],
+            piles.foundations[3]
+        ];
+
+        _.each(allPiles, function (pile) {
+            while (pile.length > 0) {
+                pile.pop();
+            }
+        });
+
         _.each(cards, function (card, index) {
             var tableau = piles.tableaux[index % 8];
             tableau.push(card);
