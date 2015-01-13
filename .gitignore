@@ -1,4 +1,3 @@
 node_modules
 npm-debug.log
-server/public/scripts/*.js
 .DS_Store
