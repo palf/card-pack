@@ -44,6 +44,15 @@ function selectPile (piles, index) {
     }
 }
 
+function selectPileID (pileIDs, index) {
+    if (index < 28) {
+        var tabIndex = selectPosition(7, index);
+        return pileIDs[tabIndex + 2];
+    } else {
+        return pileIDs[0];
+    }
+}
+
 
 module.exports = {
 
@@ -58,6 +67,85 @@ module.exports = {
             tableaux: setupTableaux(),
             foundations: setupFoundations()
         };
+    },
+
+    createSolitaire: function () {
+        function q (prefix) { return _.uniqueId(prefix + '_'); }
+        function pp (prefix) { return function () { return q(prefix); }; }
+
+        var suits = [ 'hearts', 'diamonds', 'clubs', 'spades' ];
+        var colors = [ 'red', 'black' ];
+
+        var cardIDs = _.times(52, pp('card'));
+        var cardRanks = {};
+        var cardSuits = {};
+        var cardColors = {};
+        var showing = [];
+
+
+        _.each(cardIDs, function (cardID, index) {
+            cardRanks[cardID] = (index % 13) + 1;
+            cardSuits[cardID] = suits[Math.floor(index / 13)];
+            cardColors[cardID] = colors[Math.floor(index / 26)];
+        });
+
+        //shuffle(cardIDs);
+
+        var pileIDs = _.map([
+            'stock',
+            'waste',
+            'tableau',
+            'tableau',
+            'tableau',
+            'tableau',
+            'tableau',
+            'tableau',
+            'tableau',
+            'foundation',
+            'foundation',
+            'foundation',
+            'foundation'
+        ], q);
+
+        var cardPiles = {};
+        _.each(cardIDs, function (cardID, index) {
+            cardPiles[cardID] = selectPileID(pileIDs, index);
+        });
+
+
+
+
+        // return {
+        //     cards: cards,
+        //     suits: suits,
+        //     colors: colors,
+        //     showing: showing
+        // };
+        // console.log(cardIDs);
+        // console.log(pileIDs);
+        // console.log(cardPiles);
+        // console.log(cardRanks);
+        // console.log(cardSuits);
+        // console.log(showing);
+
+        var game = {
+            cards: {
+                ids: cardIDs,
+                piles: cardPiles,
+                ranks: cardRanks,
+                suits: cardSuits,
+                colors: cardColors,
+                showing: showing
+            },
+            piles: {
+
+            }
+        };
+
+        console.log(game.cards);
+        console.log(game.piles);
+
+        return game;
     },
 
     deal: function (cards, piles) {
