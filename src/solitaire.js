@@ -26,6 +26,7 @@ $(document).ready(function () {
     board.createContainers(piles);
 
     function deal () {
+        Setup.createSolitaire();
         shuffle(cards);
         Setup.deal(cards, piles);
     }
