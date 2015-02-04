@@ -18,7 +18,6 @@ html
 
     body
         .container
-            some content
             .header
                 nav
                     ul.nav.nav-pills.pull-right
@@ -32,10 +31,12 @@ html
                     li: a(title="Freecell", href="/freecell") Freecell
                     li: a(title="Spider", href="/spider") Spider
 
+        
+              
+                button(type="button", class="btn btn-default", aria-label="Left Align")
+                    span(class="glyphicon glyphicon-align-left", aria-hidden="true")
 
             .jumbotron
                 block gameboard
 
-        p deployment check
-        
         block scripts
