@@ -1,0 +1,15 @@
+#debug {
+    font-size: small;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    min-width: 300px;
+    background: #ddd;
+    color: #666;
+}
+
+#debug ol {
+    padding-left: 10px;
+}
