@@ -16,6 +16,10 @@ html
         script(src="/libs/bootstrap.min.js")
         script(src="/libs/underscore.js")
 
+        script(src="libs/debug.js")
+        
+        link(rel="stylesheet", href="/libs/debug.css")
+
     body
         .container
             .header
@@ -34,4 +38,7 @@ html
             .jumbotron
                 block gameboard
 
+        #debug
+            ol
+    
         block scripts
