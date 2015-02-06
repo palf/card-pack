@@ -9,4 +9,9 @@ Capybara.javascript_driver = :poltergeist
  
 
 APP_PATH = 'http://localhost:3000'
+@app_query = ''
+
+Before('@debug') do
+  @app_query = '?debug'
+end
 
