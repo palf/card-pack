@@ -1,5 +1,5 @@
 When(/^I navigate to the '(\/.+)' page$/) do |route|
-  visit(APP_PATH + route)
+  visit(APP_PATH + route + @app_query)
 end
 
 Given(/^I am on the '(\/.+)' page$/) do |route|
