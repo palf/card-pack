@@ -1,8 +1,9 @@
 # Card Pack
 
 Includes:
-- A library for defining card games
-- Small web sites for playing those games (includes Solitaire, Freecell, Spider...)
+- Solitaire
+- Spider
+- Freecell
 
 ## Setup
 
