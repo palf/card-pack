@@ -1,4 +1,4 @@
-var _ = require('underscore');
+var _ = require('../../server/public/libs/underscore.js');
 
 function Actions (piles, check) {
 
